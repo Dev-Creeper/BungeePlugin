@@ -1,0 +1,4 @@
+name: BungeePlugin
+version: 1.0.0
+main: me.dev.creeper.bungeeplugin.BungeePlugin
+author: Dev-Creeper
