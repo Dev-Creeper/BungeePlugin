@@ -1,0 +1,9 @@
+#你大厅服务器的名字
+#Your Lobby Server Name in BungeeCord config.yml
+lobby-server: lobby
+#你输入/again指令后BW服务器的名字
+#Your Again BedWars Server Name in BungeeCord config.yml
+again-server-bedwars: again
+#你输入/again指令后UHC服务器的名字
+#Your Again UHC Server Name in BungeeCord config.yml
+again-server-uhc: again_uhc
