@@ -1,7 +1,7 @@
-#你大厅服务器的名字
+#你大厅服务器在配置文件里面的名字
 #Your Lobby Server Name in BungeeCord config.yml
 lobby-server: lobby
-#你输入/again指令后BW服务器的名字
+#你输入/again指令后BedWars服务器的名字
 #Your Again BedWars Server Name in BungeeCord config.yml
 again-server-bedwars: again
 #你输入/again指令后UHC服务器的名字
