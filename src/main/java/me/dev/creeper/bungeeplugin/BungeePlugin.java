@@ -32,16 +32,17 @@ public final class BungeePlugin extends Plugin implements Listener{
         return proxy;
     }
 
-    public void onEnable() {
+    public void onEnable() { //Load Plugin and create config.yml
         this.saveDefaultConfig();
         this.reloadConfig();
         instance = this;
+        //Get Plugin config 
+        //if null,getConfig reload
         if (this.getConfig().get("lobby-server") == null) {
             this.getConfig().set("lobby-server", "lobby");
             this.saveConfig();
             this.reloadConfig();
         }
-
         if (this.getConfig().get("again-server-bedwars") == null) {
             this.getConfig().set("again-server-bedwars", "again");
             this.saveConfig();
@@ -65,8 +66,8 @@ public final class BungeePlugin extends Plugin implements Listener{
         if (this.getConfig().get("again-server-uhc").equals("again_uhc")) {
             this.getLogger().info(ChatColor.YELLOW + "[警告] " + ChatColor.GREEN + "你uhc选择下一局游戏传送的服务器名字为again(可能你没有去设置),如果不存在则会报错！");
         }
-
         proxy = this.getProxy();
+        //Register Plugin Event
         this.getProxy().getPluginManager().registerListener(this, new Lisetener());
         this.getProxy().getPluginManager().registerListener(this, this);
     }
@@ -95,7 +96,6 @@ public final class BungeePlugin extends Plugin implements Listener{
                             var7.addSuppressed(var6);
                         }
                     }
-
                     throw var7;
                 }
 
@@ -117,19 +117,15 @@ public final class BungeePlugin extends Plugin implements Listener{
         } catch (IOException var3) {
             var3.printStackTrace();
         }
-
     }
 
     public void saveConfig() {
         File file = new File(this.getDataFolder(), "config.yml");
-
         try {
             ConfigurationProvider.getProvider(YamlConfiguration.class).save(this.config, file);
         } catch (IOException var3) {
             var3.printStackTrace();
         }
-
-    }
 
     public Configuration getConfig() {
         return this.config;
