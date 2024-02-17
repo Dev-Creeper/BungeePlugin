@@ -1,5 +1,7 @@
 package me.dev.creeper.bungeeplugin;
 
+//Author : Dev-Creeper
+
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
